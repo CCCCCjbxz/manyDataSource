@@ -19,12 +19,15 @@ public class UserController {
      * @param id
      * @return
      */
+    
+    //操作ds1数据库
     @GetMapping("/v1/{id}")
     @DS("ds1")
     public User getById1(@PathVariable String id) {
         return userService.getById(id);
     }
 
+    //操作ds2数据库
     @GetMapping(value = "/v2/{id}")
     @DS("ds2")
     public User getById2(@PathVariable String id) {
