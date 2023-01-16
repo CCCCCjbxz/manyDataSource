@@ -19,13 +19,13 @@ public class UserController {
      * @param id
      * @return
      */
-    @GetMapping("/v1/user/{id}")
+    @GetMapping("/v1/{id}")
     @DS("ds1")
     public User getById1(@PathVariable String id) {
         return userService.getById(id);
     }
 
-    @GetMapping(value = "/v2/user/{id}")
+    @GetMapping(value = "/v2/{id}")
     @DS("ds2")
     public User getById2(@PathVariable String id) {
         return userService.getById(id);
