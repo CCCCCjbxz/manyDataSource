@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    dynamic:
+      primary: ds1 #??????????????,?????master
+      strict: false #???????,??false. true?????????????,false???????
+      datasource:
+        ds1:
+          url: jdbc:mysql://localhost:3306/db1
+          username: root
+          password: wgh2001wgh
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0????SPI??????
+        ds2:
+          url: jdbc:mysql://localhost:3306/db2
+          username: root
+          password: wgh2001wgh
+          driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_
+      id-type: auto
